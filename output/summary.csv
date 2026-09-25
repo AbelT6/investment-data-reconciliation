@@ -1,0 +1,16 @@
+section,name,value
+break_count,market_value_mismatch,8
+break_count,accrued_interest_mismatch,6
+break_count,id_format,5
+break_count,missing_in_accounting,4
+break_count,rating_mismatch,4
+break_count,duplicate_position,3
+break_count,missing_at_custodian,3
+break_count,timing_difference,3
+metric,total_exceptions,36
+metric,unique_positions,203
+metric,positions_with_breaks,36
+metric,positions_reconciled_cleanly,167
+metric,match_rate_pct,82.3
+metric,mv_break_abs_dollar_impact,3174061.56
+metric,mv_break_net_dollar_impact,-1518185.56

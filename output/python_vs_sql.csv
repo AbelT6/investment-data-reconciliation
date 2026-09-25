@@ -1,0 +1,9 @@
+break_type,python,sql,match
+accrued_interest_mismatch,6,6,True
+duplicate_position,3,3,True
+id_format,5,5,True
+market_value_mismatch,8,8,True
+missing_at_custodian,3,3,True
+missing_in_accounting,4,4,True
+rating_mismatch,4,4,True
+timing_difference,3,3,True

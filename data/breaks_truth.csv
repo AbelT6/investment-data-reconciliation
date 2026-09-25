@@ -1,0 +1,47 @@
+cusip,break_type,detail
+1C80XH200,accrued_interest_mismatch,+5 days accrual
+35N5EG273,accrued_interest_mismatch,+4 days accrual
+3J6FVA746,accrued_interest_mismatch,+2 days accrual
+3R3GMD628,accrued_interest_mismatch,+9 days accrual
+4LA75B179,accrued_interest_mismatch,+8 days accrual
+5524NG137,accrued_interest_mismatch,+3 days accrual
+006017511,decoy,book_value off by $-0.09
+006420525,decoy,book_value off by $-0.86
+007478423,decoy,accrued_interest off by $+0.13
+009157223,decoy,book_value off by $+0.93
+073503153,decoy,market_value off by $-0.17
+099517484,decoy,accrued_interest off by $+0.78
+2AJT3E224,decoy,book_value off by $+0.01
+3AJZRB567,decoy,market_value off by $+0.73
+9KFBLE202,decoy,accrued_interest off by $+0.76
+9VRL9D134,decoy,book_value off by $-0.09
+2HJ8HC679,duplicate_position,row loaded twice
+633DFH210,duplicate_position,row loaded twice
+6XJ3GA403,duplicate_position,row loaded twice
+005516810,id_format,accounting holds '5516810'
+009712001,id_format,accounting holds '9712001'
+078639663,id_format,accounting holds '78639663'
+079547311,id_format,accounting holds '79547311'
+099062127,id_format,accounting holds '99062127'
+057948986,market_value_mismatch,MV shifted -1.49%
+097889182,market_value_mismatch,MV shifted -4.98%
+25EL7C359,market_value_mismatch,MV shifted +1.10%
+3AHUDD017,market_value_mismatch,MV shifted -3.48%
+41AXRG916,market_value_mismatch,MV shifted -3.23%
+4JYW7H475,market_value_mismatch,MV shifted +4.44%
+8XEDAB770,market_value_mismatch,MV shifted -4.00%
+9UY45C595,market_value_mismatch,MV shifted +3.18%
+070958004,missing_at_custodian,only in accounting
+55HKMD463,missing_at_custodian,only in accounting
+9F173G954,missing_at_custodian,only in accounting
+001702562,missing_in_accounting,row dropped
+1VQ65E039,missing_in_accounting,row dropped
+3GJSPG355,missing_in_accounting,row dropped
+3MVKFB290,missing_in_accounting,row dropped
+002871325,rating_mismatch,accounting shows A
+041764317,rating_mismatch,accounting shows BBB+
+2ZAAAD140,rating_mismatch,accounting shows BBB+
+3RZ0ZA539,rating_mismatch,accounting shows BBB+
+1GLYHC516,timing_difference,as_of_date = prior day
+3AXE8H491,timing_difference,as_of_date = prior day
+5FMTBG248,timing_difference,as_of_date = prior day

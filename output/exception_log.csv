@@ -1,0 +1,37 @@
+exception_id,cusip,break_type,field,custodian_value,accounting_value,difference,probable_root_cause,status,owner,date_identified
+EXC-0001,079547311,id_format,cusip,079547311,79547311,,CUSIP read as a number upstream (Excel/CSV typing stripped leading zeros),Open,Data Operations,2026-10-01
+EXC-0002,099062127,id_format,cusip,099062127,99062127,,CUSIP read as a number upstream (Excel/CSV typing stripped leading zeros),Open,Data Operations,2026-10-01
+EXC-0003,078639663,id_format,cusip,078639663,78639663,,CUSIP read as a number upstream (Excel/CSV typing stripped leading zeros),Open,Data Operations,2026-10-01
+EXC-0004,005516810,id_format,cusip,005516810,5516810,,CUSIP read as a number upstream (Excel/CSV typing stripped leading zeros),Open,Data Operations,2026-10-01
+EXC-0005,009712001,id_format,cusip,009712001,9712001,,CUSIP read as a number upstream (Excel/CSV typing stripped leading zeros),Open,Data Operations,2026-10-01
+EXC-0006,633DFH210,duplicate_position,row_count,,2,,Feed double-loaded the position,Open,Data Operations,2026-10-01
+EXC-0007,6XJ3GA403,duplicate_position,row_count,,2,,Feed double-loaded the position,Open,Data Operations,2026-10-01
+EXC-0008,2HJ8HC679,duplicate_position,row_count,,2,,Feed double-loaded the position,Open,Data Operations,2026-10-01
+EXC-0009,001702562,missing_in_accounting,position,present,absent,,Trade not booked in accounting or feed failure,Open,Trade Support,2026-10-01
+EXC-0010,1VQ65E039,missing_in_accounting,position,present,absent,,Trade not booked in accounting or feed failure,Open,Trade Support,2026-10-01
+EXC-0011,3GJSPG355,missing_in_accounting,position,present,absent,,Trade not booked in accounting or feed failure,Open,Trade Support,2026-10-01
+EXC-0012,3MVKFB290,missing_in_accounting,position,present,absent,,Trade not booked in accounting or feed failure,Open,Trade Support,2026-10-01
+EXC-0013,070958004,missing_at_custodian,position,absent,present,,Pending settlement or stale position still carried in accounting,Open,Trade Support,2026-10-01
+EXC-0014,55HKMD463,missing_at_custodian,position,absent,present,,Pending settlement or stale position still carried in accounting,Open,Trade Support,2026-10-01
+EXC-0015,9F173G954,missing_at_custodian,position,absent,present,,Pending settlement or stale position still carried in accounting,Open,Trade Support,2026-10-01
+EXC-0016,1GLYHC516,timing_difference,as_of_date,2026-09-30,2026-09-29,,"Late feed: accounting loaded the prior day's file; value diffs on this position are timing, re-check after feeds align",Open,Data Operations,2026-10-01
+EXC-0017,3AXE8H491,timing_difference,as_of_date,2026-09-30,2026-09-29,,"Late feed: accounting loaded the prior day's file; value diffs on this position are timing, re-check after feeds align",Open,Data Operations,2026-10-01
+EXC-0018,5FMTBG248,timing_difference,as_of_date,2026-09-30,2026-09-29,,"Late feed: accounting loaded the prior day's file; value diffs on this position are timing, re-check after feeds align",Open,Data Operations,2026-10-01
+EXC-0019,057948986,market_value_mismatch,market_value,4351223.56,4286426.96,-64796.6,Different pricing source between systems,Open,Pricing,2026-10-01
+EXC-0020,097889182,market_value_mismatch,market_value,16826520.63,15988186.15,-838334.48,Different pricing source between systems,Open,Pricing,2026-10-01
+EXC-0021,25EL7C359,market_value_mismatch,market_value,15375133.1,15544885.27,169752.17,Different pricing source between systems,Open,Pricing,2026-10-01
+EXC-0022,3AHUDD017,market_value_mismatch,market_value,14113070.18,13621982.77,-491087.41,Different pricing source between systems,Open,Pricing,2026-10-01
+EXC-0023,41AXRG916,market_value_mismatch,market_value,19187532.81,18567711.42,-619821.39,Different pricing source between systems,Open,Pricing,2026-10-01
+EXC-0024,4JYW7H475,market_value_mismatch,market_value,7978470.05,8332384.21,353914.16,Different pricing source between systems,Open,Pricing,2026-10-01
+EXC-0025,8XEDAB770,market_value_mismatch,market_value,8293725.74,7961642.06,-332083.68,Different pricing source between systems,Open,Pricing,2026-10-01
+EXC-0026,9UY45C595,market_value_mismatch,market_value,9565826.15,9870097.82,304271.67,Different pricing source between systems,Open,Pricing,2026-10-01
+EXC-0027,1C80XH200,accrued_interest_mismatch,accrued_interest,66483.33,80334.02,13850.69,Day-count convention or accrual cutoff difference,Open,Investment Accounting,2026-10-01
+EXC-0028,35N5EG273,accrued_interest_mismatch,accrued_interest,477442.71,488418.4,10975.69,Day-count convention or accrual cutoff difference,Open,Investment Accounting,2026-10-01
+EXC-0029,3J6FVA746,accrued_interest_mismatch,accrued_interest,92584.38,96890.63,4306.25,Day-count convention or accrual cutoff difference,Open,Investment Accounting,2026-10-01
+EXC-0030,3R3GMD628,accrued_interest_mismatch,accrued_interest,314058.58,330983.89,16925.31,Day-count convention or accrual cutoff difference,Open,Investment Accounting,2026-10-01
+EXC-0031,4LA75B179,accrued_interest_mismatch,accrued_interest,93638.65,104988.79,11350.14,Day-count convention or accrual cutoff difference,Open,Investment Accounting,2026-10-01
+EXC-0032,5524NG137,accrued_interest_mismatch,accrued_interest,187381.25,191396.56,4015.31,Day-count convention or accrual cutoff difference,Open,Investment Accounting,2026-10-01
+EXC-0033,002871325,rating_mismatch,rating,A+,A,,Stale security master data in accounting (security master: A+),Open,Reference Data,2026-10-01
+EXC-0034,041764317,rating_mismatch,rating,A-,BBB+,,Stale security master data in accounting (security master: A-),Open,Reference Data,2026-10-01
+EXC-0035,2ZAAAD140,rating_mismatch,rating,A-,BBB+,,Stale security master data in accounting (security master: A-),Open,Reference Data,2026-10-01
+EXC-0036,3RZ0ZA539,rating_mismatch,rating,A-,BBB+,,Stale security master data in accounting (security master: A-),Open,Reference Data,2026-10-01

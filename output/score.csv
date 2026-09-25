@@ -1,0 +1,9 @@
+break_type,planted,caught,missed,false_positives
+accrued_interest_mismatch,6,6,0,0
+duplicate_position,3,3,0,0
+id_format,5,5,0,0
+market_value_mismatch,8,8,0,0
+missing_at_custodian,3,3,0,0
+missing_in_accounting,4,4,0,0
+rating_mismatch,4,4,0,0
+timing_difference,3,3,0,0
