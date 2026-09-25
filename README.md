@@ -6,6 +6,8 @@ A small version of an investment data operations workflow. It reconciles bond po
 
 An insurer's portfolio lives in several systems at once. The custodian holds the securities. The accounting platform books them. The data warehouse reports on them. Each one should show the same positions, values, accrued interest, and reference data. In practice they drift apart: feeds arrive late, pricing sources differ, reference data goes stale, and IDs get mangled along the way. Every difference is a **reconciliation break**. Until it's explained, the numbers going to finance, risk, and regulators can't be trusted.
 
+**Start here:** [`notebooks/walkthrough.ipynb`](notebooks/walkthrough.ipynb) runs every step with its output and the reasoning behind it.
+
 ## What the pipeline does
 
 | Step | What it checks |
@@ -92,6 +94,7 @@ Or step by step: `python src/generate_data.py`, `src/reconcile.py`, `src/score.p
 ## Layout
 
 ```
+notebooks/ walkthrough.ipynb (step-by-step version with outputs)
 data/     generated CSVs + breaks_truth.csv answer key
 output/   exception_log.csv/.xlsx, summary.csv, score.csv, python_vs_sql.csv
 sql/      reconcile.sql
