@@ -2,6 +2,14 @@
 
 A small version of an investment data operations workflow. It reconciles bond positions between a **custodian** and an **investment accounting system**, investigates the breaks, assigns a probable **root cause** to each one, and writes an **exception log**. The same checks run in Python (pandas) and SQL (SQLite), and the results are graded against an answer key.
 
+## Key findings
+
+- **36 / 36** planted breaks caught, **0** false positives, and **0 of 10** rounding decoys flagged (`output/score.csv`, `src/score.py`).
+- A naive run with no ID normalization reports **17** missing positions against **7** actual. The 5 CUSIPs that lost their leading zeros don't join, so each shows up as "missing" on both sides and the real root cause (ID format) is lost.
+- The SQL version matches Python on all **8** break types (`output/python_vs_sql.csv`).
+
+![Planted vs caught breaks by type: 36 of 36 caught, 0 false positives](output/breaks_by_type.png)
+
 ## The problem
 
 An insurer's portfolio lives in several systems at once. The custodian holds the securities. The accounting platform books them. The data warehouse reports on them. Each one should show the same positions, values, accrued interest, and reference data. In practice they drift apart: feeds arrive late, pricing sources differ, reference data goes stale, and IDs get mangled along the way. Every difference is a **reconciliation break**. Until it's explained, the numbers going to finance, risk, and regulators can't be trusted.
