@@ -95,9 +95,23 @@ python -m venv .venv
 .venv\Scripts\activate          # Windows  (macOS/Linux: source .venv/bin/activate)
 pip install -r requirements.txt
 python run_all.py
+python src/make_chart.py        # redraws output/breaks_by_type.png from output/score.csv
 ```
 
-Or step by step: `python src/generate_data.py`, `src/reconcile.py`, `src/score.py`, `src/run_sql.py`, `src/export_excel.py`.
+Run `run_all.py` from the repo root, since it calls the `src/` scripts by relative path.
+
+Or step by step:
+
+```bash
+python src/generate_data.py
+python src/reconcile.py
+python src/score.py
+python src/run_sql.py
+python src/export_excel.py
+python src/make_chart.py
+```
+
+`export_excel.py` rewrites `output/exception_log.xlsx`, so running the pipeline replaces anything added to that file by hand in Excel.
 
 ## Layout
 
