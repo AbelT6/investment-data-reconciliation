@@ -116,11 +116,31 @@ python src/make_chart.py
 ## Layout
 
 ```
-notebooks/ walkthrough.ipynb (step-by-step version with outputs)
-data/     generated CSVs + breaks_truth.csv answer key
-output/   exception_log.csv/.xlsx, summary.csv, score.csv, python_vs_sql.csv
-sql/      reconcile.sql
-src/      generate_data.py, reconcile.py, score.py, run_sql.py, export_excel.py
+run_all.py                  runs the pipeline in order: generate -> reconcile -> score -> SQL -> Excel
+requirements.txt            Python dependencies
+notebooks/
+  walkthrough.ipynb         step-by-step version of the pipeline, with outputs and reasoning
+data/
+  custodian.csv             positions as the custodian reports them
+  accounting.csv            positions as the accounting system books them
+  security_master.csv       reference data (name, asset class, coupon, maturity, rating) per security
+  breaks_truth.csv          answer key: every planted break, plus the 10 decoys
+sql/
+  reconcile.sql             the same checks as named SQLite queries
+src/
+  generate_data.py          builds the mock data and plants the breaks (fixed seed)
+  reconcile.py              runs the checks and writes the exception log and summary
+  score.py                  grades the log against the answer key and runs the naive comparison
+  run_sql.py                runs reconcile.sql in SQLite and compares its counts to Python's
+  export_excel.py           writes the exception log, security master, and summary to .xlsx
+  make_chart.py             draws breaks_by_type.png from score.csv
+output/
+  exception_log.csv         one row per break: type, field, both values, root cause, owner, status
+  exception_log.xlsx        the same log, plus security master and summary sheets
+  summary.csv               break counts by type, match rate, dollar impact
+  score.csv                 planted vs caught vs false positives, by break type
+  python_vs_sql.csv         Python and SQL break counts side by side
+  breaks_by_type.png        chart used at the top of this README
 ```
 
 *Simplifications: all positions pay semiannual coupons on a 30/360 basis, and all data is synthetic, with fictional issuers.*
